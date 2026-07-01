@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/excavatorhirewollongong/public_html/
+    - /bin/cp -R .next/static $DEPLOYPATH/.next/static
+    - /bin/cp -R public $DEPLOYPATH/public
+    - /bin/cp -R .next/server $DEPLOYPATH/.next/server
+    - /bin/cp package.json $DEPLOYPATH
+    - /bin/cp next.config.js $DEPLOYPATH
