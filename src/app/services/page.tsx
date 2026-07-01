@@ -23,7 +23,7 @@ export default function ServicesPage() {
           { href: "/contact", label: "Contact" },
         ]}
         cta="Get a Free Quote"
-        ctaHref="/contact"
+        ctaHref="/quote"
       />
       <ServicesAlternating
         heading="Excavator Hire Services in Wollongong"
@@ -58,19 +58,19 @@ export default function ServicesPage() {
         heading="Excavator Hire Across the Illawarra"
         subheading="We deliver and support excavator hire throughout Wollongong and surrounding areas including Shellharbour, Kiama, and nearby suburbs."
         areas={[
-          { name: "Wollongong", href: "/service-areas/wollongong" },
-          { name: "Shellharbour", href: "/service-areas/shellharbour" },
-          { name: "Kiama", href: "/service-areas/kiama" },
-          { name: "Dapto", href: "/service-areas/dapto" },
-          { name: "Albion Park", href: "/service-areas/albion-park" },
-          { name: "Fairy Meadow", href: "/service-areas/fairy-meadow" },
+          { name: "Wollongong", href: "/quote?area=Wollongong" },
+          { name: "Shellharbour", href: "/quote?area=Shellharbour" },
+          { name: "Kiama", href: "/quote?area=Kiama" },
+          { name: "Dapto", href: "/quote?area=Dapto" },
+          { name: "Albion Park", href: "/quote?area=Albion%20Park" },
+          { name: "Fairy Meadow", href: "/quote?area=Fairy%20Meadow" },
         ]}
       />
       <CtaSplit
         heading="Reliable Hire Across the Illawarra Region"
         subheading="Whether you're working in Wollongong's city fringe, running a civil project in Shellharbour, or breaking ground near Kiama, we've got you covered. Our excavator is available for day-rate hire throughout the region with fast turnaround and no-nonsense service for trades and construction companies."
         cta="Enquire About Hire Rates"
-        ctaHref="/contact"
+        ctaHref="/quote"
         image="/images/services-area.jpg"
         imageAlt="Excavator hire available across Wollongong, Shellharbour and Kiama"
       />
@@ -78,7 +78,7 @@ export default function ServicesPage() {
         logo="/images/logo.png"
         blurb="Excavator Hire Wollongong provides flexible day-rate excavator rental to tradies and construction firms across Wollongong, Shellharbour, Kiama and the Illawarra region."
         email="info@excavatorhirewollongong.com.au"
-        phone="02 XXXX XXXX"
+        phone="+61 468 054 253"
         columns={[
           {
             heading: "Pages",
@@ -87,17 +87,18 @@ export default function ServicesPage() {
               { href: "/about", label: "About" },
               { href: "/services", label: "Services" },
               { href: "/contact", label: "Contact" },
+              { href: "/quote", label: "Get a Quote" },
             ],
           },
           {
             heading: "Service Areas",
             links: [
-              { href: "/service-areas/wollongong", label: "Wollongong" },
-              { href: "/service-areas/shellharbour", label: "Shellharbour" },
-              { href: "/service-areas/kiama", label: "Kiama" },
-              { href: "/service-areas/dapto", label: "Dapto" },
-              { href: "/service-areas/albion-park", label: "Albion Park" },
-              { href: "/service-areas/fairy-meadow", label: "Fairy Meadow" },
+              { href: "/quote?area=Wollongong", label: "Wollongong" },
+              { href: "/quote?area=Shellharbour", label: "Shellharbour" },
+              { href: "/quote?area=Kiama", label: "Kiama" },
+              { href: "/quote?area=Dapto", label: "Dapto" },
+              { href: "/quote?area=Albion%20Park", label: "Albion Park" },
+              { href: "/quote?area=Fairy%20Meadow", label: "Fairy Meadow" },
             ],
           },
         ]}

@@ -36,11 +36,21 @@ export default function ContactMap({
             </div>
             <div className="flex items-start gap-3">
               <Phone className="size-5 shrink-0 text-primary" />
-              <span className="text-base text-muted-foreground">{phone}</span>
+              <a
+                href={`tel:${phone.replace(/\s+/g, "")}`}
+                className="text-base text-muted-foreground transition-colors hover:text-primary"
+              >
+                {phone}
+              </a>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="size-5 shrink-0 text-primary" />
-              <span className="text-base text-muted-foreground">{email}</span>
+              <a
+                href={`mailto:${email}`}
+                className="text-base text-muted-foreground transition-colors hover:text-primary"
+              >
+                {email}
+              </a>
             </div>
           </div>
           <div className="flex flex-col gap-3">
@@ -60,6 +70,7 @@ export default function ContactMap({
         </div>
         <div className="aspect-square w-full overflow-hidden rounded-xl lg:aspect-auto">
           <iframe
+            title={heading}
             src={mapEmbedUrl}
             className="h-full min-h-[400px] w-full border-0"
             loading="lazy"

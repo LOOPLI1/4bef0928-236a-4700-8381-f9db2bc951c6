@@ -1,16 +1,42 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/blocks/navbar";
-import AboutSplit from "@/components/blocks/about-split";
-import AboutStats from "@/components/blocks/about-stats";
-import CtaBanner from "@/components/blocks/cta-banner";
+import QuoteForm from "@/components/blocks/quote-form";
 import FooterColumns from "@/components/blocks/footer-columns";
 
+const PHONE = "+61 468 054 253";
+
+const SERVICES = [
+  "Daily Excavator Hire",
+  "Self-Operate Hire",
+  "Short-Term Rental",
+  "Local Delivery",
+  "Not sure yet",
+];
+
+const AREAS = [
+  "Wollongong",
+  "Shellharbour",
+  "Kiama",
+  "Dapto",
+  "Albion Park",
+  "Fairy Meadow",
+];
+
 export const metadata: Metadata = {
-  title: "About | Excavator Hire Wollongong",
-  description: "Excavator Hire Wollongong is a small, locally operated rental business serving tradies and construction firms across the Illawarra region.",
+  title: "Get a Free Quote | Excavator Hire Wollongong",
+  description:
+    "Request a free, no-obligation excavator hire quote for your job across Wollongong, Shellharbour, Kiama and the Illawarra region.",
 };
 
-export default function AboutPage() {
+export default async function QuotePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ area?: string | string[]; service?: string | string[] }>;
+}) {
+  const params = await searchParams;
+  const area = typeof params.area === "string" ? params.area : "";
+  const service = typeof params.service === "string" ? params.service : "";
+
   return (
     <>
       <Navbar
@@ -25,36 +51,21 @@ export default function AboutPage() {
         cta="Get a Free Quote"
         ctaHref="/quote"
       />
-      <AboutSplit
-        heading="Local Excavator Hire You Can Count On"
-        body="Excavator Hire Wollongong is a small, locally operated rental business serving tradies and construction firms across the Illawarra region. Our equipment is trade-maintained, ready to work daily, and available on a straightforward day-rate hire basis. We keep things simple so you can focus on getting the job done."
-        image="/images/about.jpg"
-        imageAlt="Excavator Hire Wollongong — local Illawarra rental company"
-        stats={[
-          { value: "Local", label: "Wollongong Based" },
-          { value: "Daily", label: "Equipment Readiness" },
-          { value: "100%", label: "Fully Insured" },
-        ]}
-      />
-      <AboutStats
-        heading="Excavator Hire Built for the Illawarra"
-        items={[
-          { value: "Wollongong", label: "Home Base" },
-          { value: "7 Days", label: "A-Week Availability" },
-          { value: "100%", label: "Fully Insured" },
-        ]}
-      />
-      <CtaBanner
-        heading="Need a Reliable Excavator for Your Next Job?"
-        subheading="We're available Monday to Saturday, 7am–5pm. Call us or submit an enquiry and we'll get back to you fast."
-        cta="Get a Free Quote"
-        ctaHref="/quote"
+      <QuoteForm
+        heading="Get a Free Excavator Hire Quote"
+        subheading="Tell us about your job and we'll get back to you fast with a no-obligation day-rate quote for excavator hire across the Illawarra."
+        formCta="Request My Free Quote"
+        phone={PHONE}
+        services={SERVICES}
+        areas={AREAS}
+        service={service}
+        area={area}
       />
       <FooterColumns
         logo="/images/logo.png"
         blurb="Excavator Hire Wollongong provides flexible day-rate excavator rental to tradies and construction firms across Wollongong, Shellharbour, Kiama and the Illawarra region."
         email="info@excavatorhirewollongong.com.au"
-        phone="+61 468 054 253"
+        phone={PHONE}
         columns={[
           {
             heading: "Pages",

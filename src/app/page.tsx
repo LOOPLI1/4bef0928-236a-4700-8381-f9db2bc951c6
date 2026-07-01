@@ -24,13 +24,13 @@ export default function HomePage() {
           { href: "/contact", label: "Contact" },
         ]}
         cta="Get a Free Quote"
-        ctaHref="/contact"
+        ctaHref="/quote"
       />
       <HeroSplit
         headline="Excavator Hire in Wollongong — Ready When You Are"
         subheadline="Day-rate excavator rental for tradies and construction companies across Wollongong, Shellharbour, Kiama and surrounding suburbs. Reliable machinery, no fuss."
         cta="Get a Free Quote"
-        ctaHref="/contact"
+        ctaHref="/quote"
         image="/images/hero.jpg"
         imageAlt="Excavator available for hire in Wollongong"
         trustBadge="Trusted by trades and construction firms across the Illawarra"
@@ -40,7 +40,7 @@ export default function HomePage() {
         subheading="Simple, flexible excavator hire built around the way trades work. Pick your day rate, get on site, get the job done."
         items={[
           {
-            icon: "excavator",
+            icon: "shovel",
             title: "Daily Excavator Hire",
             description: "Self-operate hire available on a flexible day-rate basis to suit your project schedule",
           },
@@ -69,13 +69,13 @@ export default function HomePage() {
         heading="Ready to Book Your Excavator?"
         subheading="Get in touch today and we'll confirm availability for your project across Wollongong, Shellharbour, Kiama and surrounding areas."
         cta="Get a Free Quote"
-        ctaHref="/contact"
+        ctaHref="/quote"
       />
       <FooterColumns
         logo="/images/logo.png"
         blurb="Excavator Hire Wollongong provides flexible day-rate excavator rental to tradies and construction firms across Wollongong, Shellharbour, Kiama and the Illawarra region."
         email="info@excavatorhirewollongong.com.au"
-        phone="02 XXXX XXXX"
+        phone="+61 468 054 253"
         columns={[
           {
             heading: "Pages",
@@ -84,17 +84,18 @@ export default function HomePage() {
               { href: "/about", label: "About" },
               { href: "/services", label: "Services" },
               { href: "/contact", label: "Contact" },
+              { href: "/quote", label: "Get a Quote" },
             ],
           },
           {
             heading: "Service Areas",
             links: [
-              { href: "/service-areas/wollongong", label: "Wollongong" },
-              { href: "/service-areas/shellharbour", label: "Shellharbour" },
-              { href: "/service-areas/kiama", label: "Kiama" },
-              { href: "/service-areas/dapto", label: "Dapto" },
-              { href: "/service-areas/albion-park", label: "Albion Park" },
-              { href: "/service-areas/fairy-meadow", label: "Fairy Meadow" },
+              { href: "/quote?area=Wollongong", label: "Wollongong" },
+              { href: "/quote?area=Shellharbour", label: "Shellharbour" },
+              { href: "/quote?area=Kiama", label: "Kiama" },
+              { href: "/quote?area=Dapto", label: "Dapto" },
+              { href: "/quote?area=Albion%20Park", label: "Albion Park" },
+              { href: "/quote?area=Fairy%20Meadow", label: "Fairy Meadow" },
             ],
           },
         ]}

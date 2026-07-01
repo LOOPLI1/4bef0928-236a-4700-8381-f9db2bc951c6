@@ -22,7 +22,7 @@ export default function ContactPage() {
           { href: "/contact", label: "Contact" },
         ]}
         cta="Get a Free Quote"
-        ctaHref="/contact"
+        ctaHref="/quote"
       />
       <ContactForm
         heading="Get in Touch — Excavator Hire Enquiries Welcome"
@@ -32,7 +32,7 @@ export default function ContactPage() {
       <ContactMap
         heading="Find Us"
         address="Wollongong, NSW 2500"
-        phone="02 XXXX XXXX"
+        phone="+61 468 054 253"
         email="info@excavatorhirewollongong.com.au"
         hours={[
           { day: "Monday – Friday", time: "7:00am – 5:00pm" },
@@ -45,7 +45,7 @@ export default function ContactPage() {
         logo="/images/logo.png"
         blurb="Excavator Hire Wollongong provides flexible day-rate excavator rental to tradies and construction firms across Wollongong, Shellharbour, Kiama and the Illawarra region."
         email="info@excavatorhirewollongong.com.au"
-        phone="02 XXXX XXXX"
+        phone="+61 468 054 253"
         columns={[
           {
             heading: "Pages",
@@ -54,17 +54,18 @@ export default function ContactPage() {
               { href: "/about", label: "About" },
               { href: "/services", label: "Services" },
               { href: "/contact", label: "Contact" },
+              { href: "/quote", label: "Get a Quote" },
             ],
           },
           {
             heading: "Service Areas",
             links: [
-              { href: "/service-areas/wollongong", label: "Wollongong" },
-              { href: "/service-areas/shellharbour", label: "Shellharbour" },
-              { href: "/service-areas/kiama", label: "Kiama" },
-              { href: "/service-areas/dapto", label: "Dapto" },
-              { href: "/service-areas/albion-park", label: "Albion Park" },
-              { href: "/service-areas/fairy-meadow", label: "Fairy Meadow" },
+              { href: "/quote?area=Wollongong", label: "Wollongong" },
+              { href: "/quote?area=Shellharbour", label: "Shellharbour" },
+              { href: "/quote?area=Kiama", label: "Kiama" },
+              { href: "/quote?area=Dapto", label: "Dapto" },
+              { href: "/quote?area=Albion%20Park", label: "Albion Park" },
+              { href: "/quote?area=Fairy%20Meadow", label: "Fairy Meadow" },
             ],
           },
         ]}

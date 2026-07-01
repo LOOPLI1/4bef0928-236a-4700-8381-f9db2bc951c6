@@ -25,10 +25,10 @@ interface NavbarProps {
 
 export default function Navbar({ logo, logoHref, links, cta, ctaHref }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-secondary text-secondary-foreground">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href={logoHref} className="relative block h-9 w-30">
-          <Image src={logo} alt="" fill className="object-contain object-left" />
+        <Link href={logoHref} className="relative block h-9 w-40">
+          <Image src={logo} alt="Excavator Hire Wollongong" fill className="object-contain object-left" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -36,7 +36,7 @@ export default function Navbar({ logo, logoHref, links, cta, ctaHref }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+              className="text-sm font-medium text-secondary-foreground/85 transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -50,7 +50,7 @@ export default function Navbar({ logo, logoHref, links, cta, ctaHref }: NavbarPr
         <Sheet>
           <SheetTrigger
             render={
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="text-secondary-foreground hover:bg-white/10 hover:text-accent md:hidden">
                 <Menu className="size-5" />
               </Button>
             }
