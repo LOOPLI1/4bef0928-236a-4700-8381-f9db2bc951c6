@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import Script from "next/script";
 
 interface ContactFormProps {
   heading: string;
@@ -9,7 +6,7 @@ interface ContactFormProps {
   formCta: string;
 }
 
-export default function ContactForm({ heading, subheading, formCta }: ContactFormProps) {
+export default function ContactForm({ heading, subheading }: ContactFormProps) {
   return (
     <section className="w-full bg-background">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
@@ -21,30 +18,27 @@ export default function ContactForm({ heading, subheading, formCta }: ContactFor
             {subheading}
           </p>
         </div>
-        <form className="mt-12 flex flex-col gap-6">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" name="name" type="text" required />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" required />
-            </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label htmlFor="phone">Phone</Label>
-            <Input id="phone" name="phone" type="tel" />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea id="message" name="message" rows={5} required />
-          </div>
-          <Button type="submit" size="lg" className="w-full sm:w-fit">
-            {formCta}
-          </Button>
-        </form>
+        <div className="mt-12">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/GadtGo8qku1LxqkfSfGy"
+            className="h-[506px] w-full rounded-[10px] border-none"
+            id="inline-GadtGo8qku1LxqkfSfGy"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Excavator Hire"
+            data-height="506"
+            data-layout-iframe-id="inline-GadtGo8qku1LxqkfSfGy"
+            data-form-id="GadtGo8qku1LxqkfSfGy"
+            title="Excavator Hire"
+          />
+        </div>
       </div>
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </section>
   );
 }
