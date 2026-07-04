@@ -5,23 +5,6 @@ import FooterColumns from "@/components/blocks/footer-columns";
 
 const PHONE = "+61 468 054 253";
 
-const SERVICES = [
-  "Daily Excavator Hire",
-  "Self-Operate Hire",
-  "Short-Term Rental",
-  "Local Delivery",
-  "Not sure yet",
-];
-
-const AREAS = [
-  "Wollongong",
-  "Shellharbour",
-  "Kiama",
-  "Dapto",
-  "Albion Park",
-  "Fairy Meadow",
-];
-
 export const metadata: Metadata = {
   title: "Get a Free Quote | Excavator Hire Wollongong",
   description:
@@ -31,11 +14,10 @@ export const metadata: Metadata = {
 export default async function QuotePage({
   searchParams,
 }: {
-  searchParams: Promise<{ area?: string | string[]; service?: string | string[] }>;
+  searchParams: Promise<{ area?: string | string[] }>;
 }) {
   const params = await searchParams;
   const area = typeof params.area === "string" ? params.area : "";
-  const service = typeof params.service === "string" ? params.service : "";
 
   return (
     <>
@@ -54,11 +36,7 @@ export default async function QuotePage({
       <QuoteForm
         heading="Get a Free Excavator Hire Quote"
         subheading="Tell us about your job and we'll get back to you fast with a no-obligation day-rate quote for excavator hire across the Illawarra."
-        formCta="Request My Free Quote"
         phone={PHONE}
-        services={SERVICES}
-        areas={AREAS}
-        service={service}
         area={area}
       />
       <FooterColumns

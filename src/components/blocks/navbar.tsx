@@ -50,7 +50,7 @@ export default function Navbar({ logo, logoHref, links, cta, ctaHref }: NavbarPr
         <Sheet>
           <SheetTrigger
             render={
-              <Button variant="ghost" size="icon" className="text-secondary-foreground hover:bg-white/10 hover:text-accent md:hidden">
+              <Button data-slot="sheet-trigger" variant="ghost" size="icon" className="text-secondary-foreground hover:bg-white/10 hover:text-accent md:hidden">
                 <Menu className="size-5" />
               </Button>
             }
