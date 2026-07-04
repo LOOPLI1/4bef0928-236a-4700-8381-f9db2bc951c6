@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import { Phone, ShieldCheck, Clock, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -6,17 +9,22 @@ interface QuoteFormProps {
   heading: string;
   subheading: string;
   phone: string;
-  /** Pre-filled service area / suburb, e.g. from `?area=` */
-  area?: string;
 }
 
 export default function QuoteForm({
   heading,
   subheading,
   phone,
-  area = "",
 }: QuoteFormProps) {
   const telHref = `tel:${phone.replace(/\s+/g, "")}`;
+
+  // Read the `?area=` suburb from the URL on the client. Done here rather than
+  // via server-side searchParams so the page stays statically exportable.
+  const [area, setArea] = useState("");
+  useEffect(() => {
+    const value = new URLSearchParams(window.location.search).get("area");
+    if (value) setArea(value);
+  }, []);
 
   return (
     <section className="w-full bg-background">

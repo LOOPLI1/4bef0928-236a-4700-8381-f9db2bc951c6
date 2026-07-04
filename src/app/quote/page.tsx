@@ -11,14 +11,7 @@ export const metadata: Metadata = {
     "Request a free, no-obligation excavator hire quote for your job across Wollongong, Shellharbour, Kiama and the Illawarra region.",
 };
 
-export default async function QuotePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ area?: string | string[] }>;
-}) {
-  const params = await searchParams;
-  const area = typeof params.area === "string" ? params.area : "";
-
+export default function QuotePage() {
   return (
     <>
       <Navbar
@@ -37,7 +30,6 @@ export default async function QuotePage({
         heading="Get a Free Excavator Hire Quote"
         subheading="Tell us about your job and we'll get back to you fast with a no-obligation day-rate quote for excavator hire across the Illawarra."
         phone={PHONE}
-        area={area}
       />
       <FooterColumns
         logo="/images/logo.png"
