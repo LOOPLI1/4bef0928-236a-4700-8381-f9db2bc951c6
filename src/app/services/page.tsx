@@ -45,6 +45,7 @@ export default function ServicesPage() {
             description: "Need a machine for a day, a few days, or a week? We offer short-term rental options designed around the pace of trade and construction work.",
             image: "/images/services-short-term.jpg",
             imageAlt: "Short-term excavator rental Wollongong",
+            imagePosition: "object-bottom",
           },
           {
             title: "Local Delivery — Wollongong, Shellharbour & Kiama",

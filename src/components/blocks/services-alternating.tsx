@@ -6,6 +6,7 @@ interface ServiceAlternatingItem {
   description: string;
   image: string;
   imageAlt: string;
+  imagePosition?: string;
 }
 
 interface ServicesAlternatingProps {
@@ -35,7 +36,12 @@ export default function ServicesAlternating({
                   index % 2 === 1 && "lg:order-2"
                 )}
               >
-                <Image src={item.image} alt={item.imageAlt} fill className="object-cover" />
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  className={cn("object-cover", item.imagePosition ?? "object-center")}
+                />
               </div>
               <div className="flex flex-col gap-4 text-left">
                 <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
